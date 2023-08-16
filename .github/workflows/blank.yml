@@ -15,11 +15,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Smoke Test
-        if: contains(github.event.pull_request.title, 'skip-smoke-test') == false
+        if: contains(github.event.pull_request.title, 'skip-build') == false
         run: |
-          echo "smoke test"
+          echo "build"
           exit 1
-
   build1:
     runs-on: ubuntu-latest
 
@@ -29,7 +28,7 @@ jobs:
           echo "test step1"
       - name: test step1
         run : |
-          echo "test step1"
+          echo "test step2"
   build2:
     runs-on: ubuntu-latest
 
