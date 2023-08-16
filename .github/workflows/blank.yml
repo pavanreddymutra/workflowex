@@ -18,6 +18,8 @@ jobs:
         if: contains(github.event.pull_request.title, 'skip-smoke-test') == false
         run: |
           echo "smoke test"
+          exit 1
+
 
   build1:
     runs-on: ubuntu-latest
