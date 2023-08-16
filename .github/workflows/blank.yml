@@ -1,12 +1,11 @@
 name: CI/CD Workflow
-
 on:
   pull_request:
     types:
       - opened
       - synchronize
     branches:
-      - main
+      - main      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,3 +18,4 @@ jobs:
         if: contains(github.event.pull_request.title, 'skip-smoke-test') == false
         run: |
           echo "smoke test"
+          exit 1
