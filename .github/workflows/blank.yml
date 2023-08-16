@@ -19,3 +19,14 @@ jobs:
         run: |
           echo "smoke test"
           exit 1
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: test step1
+        run : |
+          echo "test step1"
+      - name: test step1
+        run : |
+          echo "test step1"
